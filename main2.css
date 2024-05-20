@@ -1,0 +1,76 @@
+main{
+  display: grid;
+  grid-template-rows: 33% 33% 33%;
+  background-color: yellow;
+  padding: 2em;
+  height: 100vw;
+  margin: 2%;
+  outline: 2px solid black;
+}
+
+h2 {
+  font-size: 2em;
+  display: grid;
+  place-items: center;
+}
+
+p {
+  display: grid;
+  place-items: center;
+}
+
+.gambar {
+  background-color: tomato;
+}
+.pertama{
+  height: 10vh;
+  width: auto;
+}
+
+.kedua {
+  height: 10vh;
+  width: auto;
+  background-color: aqua !important;
+}
+
+article {
+  display: grid;
+  gap: 2em;
+}
+
+.grid1 {
+  display: grid;
+  grid-template-columns: 60% 40%;
+  outline: 2px solid black;
+  padding: 1em;
+}
+
+.grid1 > .kotak {
+  height: 100%;
+  background-color: tomato;
+}
+
+.grid2 {
+  display: grid;
+  grid-template-columns: 60% 40%;
+  outline: 2px solid black;
+  padding : 1em;
+}
+
+.grid2 > .kotak {
+  height: 100%;
+  background-color: salmon;
+}
+
+@media (width <= 680px) {
+    main {
+        margin: 4%;
+    }
+    h2{
+        font-size: 1.4em;
+    }
+    
+    .grid1 {
+      grid-auto-flow: row;
+    }
+}
