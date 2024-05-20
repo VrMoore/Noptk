@@ -1,0 +1,19 @@
+main{
+    background-color: yellow;
+    padding: 2em;
+    margin: 2%;
+}
+
+h2 {
+    font-size: 2em;
+}
+
+
+@media (width <= 680px) {
+    main {
+        margin: 4%;
+    }
+    h2{
+        font-size: 1.4em;
+    }
+}
