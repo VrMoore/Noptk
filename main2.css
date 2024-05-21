@@ -1,0 +1,120 @@
+main{
+  display: grid;
+  grid-template-rows: 10% 60% auto;
+  background-color: yellow;
+  padding: 2em;
+  height: 100vh;
+  margin: 2%;
+  outline: 2px solid black;
+}
+
+.judul_utama > h2{
+  font-size: calc(100% + 10px);
+}
+
+.judul_utama > p {
+  display: grid;
+  place-items: center;
+  font-size: calc(100% + 4px);
+}
+
+h2 {
+  font-size: 2em;
+  display: grid;
+  place-items: center;
+}
+
+.gambar {
+  background-color: tomato;
+}
+.pertama{
+  height: 10vh;
+  width: auto;
+}
+
+.kedua {
+  height: 10vh;
+  width: auto;
+  background-color: aqua !important;
+}
+
+article {
+  display: grid;
+}
+
+.grid-content{
+  display: grid;
+  place-items: center;
+  padding: 20%;
+  text-align: justify;
+  padding: 6%;
+}
+
+.grid1 {
+  display: grid;
+  grid-template-columns: 60% 40%;
+  padding: 1em;
+  gap: 1.2em;
+  height: auto;
+  overflow: hidden;
+}
+
+.grid2 > .kotak {
+  height: 100%;
+}
+
+.grid2 {
+  display: grid;
+  grid-template-columns: 40% 60%;
+  gap: 1.2em;
+  justify-content: center;
+  padding : 1em;
+  height: fixed;
+  clear: both;
+}
+
+@media (width <= 680px) {
+    main {
+        margin: 4%;
+        grid-template-rows: 30% 60% 10%;
+    }
+    h2{
+        font-size: 1.4em;
+    }
+    
+    .judul_utama > h2 {
+      font-size: auto;
+    }
+    
+    .judul_utama > p {
+      font-size: auto;
+    }
+    
+    .grid1 {
+      grid-template-columns: 100% ;
+      grid-template-rows: 50% 50%;
+      gap: .8em;
+    }
+    
+    .grid2 {
+      grid-template-columns: 100% ;
+      grid-template-rows: 50% 50%;
+      gap: .8em;
+    }
+    
+    .grid-content {
+      padding: 1%;
+    }
+    
+    .grid2 > .kotak {
+      display: none;
+    }
+    
+    .grid-content > p {
+      font-size: auto;
+    }
+}
+
+@media (680px < width < 1000px) {
+  
+}
