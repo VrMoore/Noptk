@@ -1,0 +1,155 @@
+main{
+  background-color: transparent;
+  padding: clamp(.8em , 1.2em, 1.5em);
+  margin: clamp(.6em, 1em, 1.3em);
+}
+
+/* h1,h2,h3 {
+  text-wrap: balance;
+} */
+
+.judul_utama > h2{
+  font-size: calc(100% + 10px);
+  text-transform: uppercase;
+}
+
+.judul_utama > p {
+  display: grid;
+  place-items: center;
+  font-size: calc(100% + 4px);
+  text-align: justify;
+}
+.konteks {
+  background-color: white;
+  border-radius: 1.4vh;
+  margin-top: 1.3em;
+  padding: .7em;
+  text-align: justify;
+  text-align-last: center;
+  font-size: clamp(.9em,1em,1.1em) !important;
+}
+
+h2 {
+  font-size: 2em;
+  display: grid;
+  place-items: center;
+}
+
+.gambar {
+  background-color: tomato;
+}
+.pertama{
+  height: 10vh;
+  width: auto;
+}
+
+.kedua {
+  height: 10vh;
+  width: auto;
+  background-color: aqua !important;
+}
+
+.main-content {
+  display: grid;
+  gap: 1.3em;
+}
+
+.grid-content{
+  display: grid;
+  place-items: center;
+  padding: 20%;
+  text-align: justify;
+  padding: 6%;
+}
+
+.grid1 {
+  display: grid;
+  grid-template-columns: 60% 40%;
+  padding: 1em;
+  gap: 1.2em;
+  height: auto;
+  overflow: hidden;
+  background-color: rgb(243, 236, 236);
+  margin-top: 1.5em;
+  box-shadow:
+  0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+  0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+  0 12.5px 10px rgba(0, 0, 0, 0.06);
+  border-radius: .4em;
+}
+
+.line {
+  display: grid;
+  place-items: center;
+  border-bottom: 2px solid white;
+  padding: 1em;
+  border-width: clamp(.1em,.2em,.3em);
+}
+
+.grid2 > .kotak {
+  height: 100%;
+}
+
+.grid2 {
+  display: grid;
+  grid-template-columns: 40% 60%;
+  gap: 1.2em;
+  justify-content: center;
+  padding : 1em;
+  background-color: rgb(243, 236, 236);
+  box-shadow:
+  0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+  0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+  0 12.5px 10px rgba(0, 0, 0, 0.06);
+  border-radius: .4em;
+}
+
+
+@media (width <= 680px) {
+    main {
+        margin: 4%;
+        grid-template-rows: 30% 60% 10%;
+    }
+    h2{
+        font-size: 1.4em;
+    }
+    
+    .judul_utama > h2 {
+      font-size: auto;
+      text-align: center;
+    }
+    
+    .judul_utama > p {
+      font-size: auto;
+      text-align: center;
+    }
+    
+    .grid1 {
+      grid-template-columns: 100% ;
+      grid-template-rows: 50% 50%;
+      gap: .8em;
+    }
+    
+    .grid2 {
+      grid-template-columns: 100% ;
+      grid-template-rows: 50% 50%;
+      gap: .8em;
+    }
+    
+    .grid-content {
+      padding: 1%;
+    }
+    
+    .grid2 > .kotak {
+      display: none;
+    }
+    
+    .grid-content > p {
+      font-size: auto;
+    }
+
+    .seni {
+      padding: 3vw;
+    }
+}
+

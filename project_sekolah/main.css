@@ -6,9 +6,41 @@
     font-family: 'Lato', sans-serif;
 }
 
-body {
-    background-color: white;
+html {
+    scroll-behavior: smooth;
 }
+
+:root {
+    --fsize-h1: clamp(5vw, 2rem, 3rem);
+    --fsize-h2: clamp(2.5vw, 1.8rem, 2.8rem);
+    --fsize-h3: clamp(2vw, 1.2rem, 2.4rem);
+    font-size: clamp(.9vw , 20px , 16px);
+    animation-duration: .2s;
+}
+
+/* body {
+    background-image: url('batik.jpg');
+    background-size: auto;
+    background-position: center;
+    min-height: 100vh;
+    color : white;
+    position: cover;
+    isolation: isolate;
+}
+
+body::after {
+    content: "";
+    position: fixed;
+    z-index : -1;
+    background: black;
+    inset: 0;
+    opacity: .7;
+} */
+
+body {
+    background-color: rgb(218, 160, 109);
+}
+
 header {
     position: relative;
     padding: 1em;
@@ -16,18 +48,35 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: rgb(160, 82, 45);
+    background-color: rgb(32,32,32);
     transition: .3s;
 }
 header h1 {
     align-self: flex-start;
     display: block;
+    text-transform: uppercase;
+    color: white;
 }
 nav {
-    display: flex;
+    display : flex;
     justify-content: space-between;
     align-items: center;
 }
+
+.dropdown {
+    z-index: 9999;
+    position: absolute;
+    display: None;
+    background-color: rgb(32,32,32);
+}
+.dropdown li {
+    display: block;
+    padding: .4em;
+}
+.wrap:hover ul.dropdown {
+    display: block;
+}
+
 .menu {
     display: flex;
     justify-content: center;
@@ -42,12 +91,16 @@ nav {
     display: block;
     padding: 10px 20px;
     text-decoration: none;
-    color: black;
+    color: white;
 }
 .menu li a:hover {
     box-shadow: 0 -2px 0px white inset;
-    background-color: rgb(121, 66, 40);
+    background-color: rgb(32,32,32);
     transition: .3s linear;
+}
+
+.dropdown {
+    display: invisible;
 }
 
 .toogle-menu {
@@ -79,7 +132,7 @@ nav input:checked ~ .menu {
     position: relative;
     width: 20px;
     height: 4px;
-    background-color: black;
+    background-color: white;
     border-radius: 10px;
     cursor: pointer;
     z-index: 2;
@@ -88,7 +141,7 @@ nav input:checked ~ .menu {
 .hamburger::before, .hamburger::after {
     content: '';
     position: absolute;
-    background-color: black;
+    background-color: white;
     width: 20px;
     height: 4px;
     border-radius: 10px;
@@ -103,7 +156,7 @@ nav input:checked ~ .menu {
     width: 20px;
 }
 
-@media (width <= 768px) {
+@media (width <= 1042px) {
     header {
         padding: 10px;
     }
@@ -119,7 +172,7 @@ nav input:checked ~ .menu {
         right: -250px;
         width: 250px;
         height: 100%;
-        background-color: rgb(160, 82, 45);
+        background-color: rgb(32,32,32);
         padding: 50px;
     }
     .menu li {
@@ -129,3 +182,19 @@ nav input:checked ~ .menu {
         padding: 15px;
     }
 }
+
+.anchor {
+    display: grid;
+    text-align: center;
+  }
+  .anchor > a {
+    text-decoration: none;
+    color: black;
+    display: block;
+    padding: .5em;
+    transition: .5s;
+  }
+  .anchor > a :hover {
+    text-decoration: 1px solid black;
+    transition: .5s;
+  }

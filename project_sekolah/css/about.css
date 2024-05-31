@@ -1,0 +1,42 @@
+.line{
+    display: grid;
+    place-items: center;
+    border-bottom: 2px solid white;
+    padding: 1em;
+    border-width: clamp(.1em,.2em,.3em);
+    margin-bottom: 1.2em;
+}
+.creator {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2,1fr);
+    padding: 1em;
+    gap: 1.2em;
+}
+.card {
+    background-color: white;
+    padding: 1em;
+    border-radius: .5em;
+    box-shadow:
+    0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+    0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+    0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+    0 100px 80px rgba(0, 0, 0, 0.12);
+    text-align: center;
+}
+
+@media (720px < width <= 1024px) {
+    .creator {
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(3,1fr);
+    }
+}
+
+@media (width <= 720px) {
+    .creator {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6,1fr);
+    }
+}
