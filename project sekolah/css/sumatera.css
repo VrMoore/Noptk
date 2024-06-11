@@ -1,0 +1,155 @@
+.judul_utama > h2 {
+  padding: 1em;
+}
+
+.line{
+  display: grid;
+  place-items: center;
+  border-bottom: 2px solid white;
+  padding: 1em;
+  border-width: clamp(.1em,.2em,.3em);
+}
+
+.daerah {
+  display: grid;
+  grid-template-areas: 
+  'musik'
+  'pakaian'
+  'tarian'
+  'rumah';
+  grid-template-rows: repeat(4, 1fr);
+  gap: 1em;
+  padding: clamp(.7em, 1em, 1.3em);
+  width: 100%;
+  height: 100vh;
+  margin-top: clamp(1em,1.4em,1.8em);
+}
+
+.content {
+  display: grid;
+  place-items: center;
+  text-align: justify;
+  grid-template-columns: repeat(2, 1fr);
+  grid-row: 1;
+  gap: clamp(1.2em,1.5em,2em);
+  padding: 1em;
+  background-color: white;
+  box-shadow:
+  0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+  0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+  0 12.5px 10px rgba(0, 0, 0, 0.06),
+  0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+  0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+  0 100px 80px rgba(0, 0, 0, 0.12);
+  border-radius: 2vh;
+}
+.konten > h3 {
+  display: block;
+  padding: clamp(.4em,.8em,1.2em);
+  text-align: center;
+}
+.konten > h2 {
+  display: block;
+  padding: clamp(.8em,1.2em,1.4em);
+  text-align: center;
+}
+
+img {
+  object-fit: cover;
+  font-style: italic;
+  background-position: center;
+}
+img[data-zoom] {
+  cursor: pointer;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  margin: 1em;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+  transition: .5s;
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+}
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 99999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity var(--duration) ease-in-out;
+}
+.popup.show {
+  opacity: 1;
+}
+.popup img {
+  width: auto;
+  height: auto;
+  max-width: 90%;
+  max-height: 90%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  transform: scale(0);
+  transition: transform var(--duration) ease-in-out;
+}
+.popup.show img {
+  transform: scale(1);
+}
+
+
+.musik {
+  grid-area: musik;
+}
+
+.pakaian {
+  grid-area: pakaian;
+}
+
+.tarian {
+  grid-area: tarian;
+}
+
+.rumah {
+  grid-area: rumah;
+}
+
+.anchor {
+  display: grid;
+  text-align: center;
+}
+.anchor > a {
+  text-decoration: none;
+  color: black;
+  display: block;
+  padding: .5em;
+  transition: .5s;
+}
+.anchor > a :hover {
+  text-decoration: 1px solid black;
+  transition: .5s;
+}
+
+.credit {
+  background-color: rgb(32,32,32);
+  padding: 1.2em;
+  border-radius: 1.2em;
+  color: white;
+  text-align: center;
+}
+.credit > p {
+  padding: .3em;
+}
+
+@media (width <= 720px) {
+  .content {
+    grid-template-rows: 1fr;
+    grid-template-columns: none;
+  }
+}
